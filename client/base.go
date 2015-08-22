@@ -6,7 +6,8 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/icecrime/docker-api/api"
+	//"github.com/icecrime/docker-api/api"
+	"github.com/kostickm/docker-api-1/api"
 )
 
 func NewBaseServiceClient(client *http.Client, baseURI string) *baseClient {

@@ -5,7 +5,8 @@ import (
 
 	"github.com/emicklei/go-restful"
 	"github.com/emicklei/go-restful/swagger"
-	"github.com/icecrime/docker-api/api"
+	//"github.com/icecrime/docker-api/api"
+	"github.com/kostickm/docker-api-1/api"
 )
 
 // New creates a new Docker remote API service instance in the form of an

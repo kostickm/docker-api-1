@@ -6,7 +6,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/icecrime/docker-api/api"
+	//"github.com/icecrime/docker-api/api"
+	"github.com/kostickm/docker-api-1/api"
 )
 
 func NewContainersServiceClient(client *http.Client, baseURI string) *containersClient {
