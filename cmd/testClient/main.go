@@ -28,6 +28,11 @@ func main() {
 	h := &http.Client{}
 	c := client.New(h, "http://localhost:8080")
 
+	testConfig := map[string]interface{}{
+		"Image":    "busybox",
+		"Hostname": "PoCHostname",
+	}
+
 	fmt.Printf("> ")
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
@@ -38,6 +43,10 @@ func main() {
 			printResult(c.Ping())
 		case "version":
 			printResult(c.Version())
+		case "create":
+			printResult(c.Create(testConfig))
+		case "start":
+			printResult(c.Start("testContainerID"))
 		default:
 			fmt.Printf("Unknown command %q\n", scanner.Text())
 		}

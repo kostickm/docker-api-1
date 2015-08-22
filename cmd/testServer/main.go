@@ -33,6 +33,18 @@ func (*testServer) Version() (*api.Version, error) {
 	}, nil
 }
 
+func (*testServer) Create(p interface{}) (*api.ListContainerID, error) {
+	log.Infof("testServer.Create(%v)", p)
+	var containerID *api.ListContainerID
+	return containerID, nil
+}
+
+func (*testServer) Start(p string) (int, error) {
+	log.Infof("testServer.Start(%v)", p)
+	var statusCode int
+	return statusCode, nil
+}
+
 func main() {
 	srv := server.New(&testServer{}, "swagger-ui/dist/")
 	if err := http.ListenAndServe("127.0.0.1:8080", srv); err != nil {
